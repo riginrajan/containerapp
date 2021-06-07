@@ -1,0 +1,22 @@
+#!/bin/sh
+node_name=`uname -n`
+cat <<EOF > /var/www/html/index.html
+<!DOCTYPE html>
+<html lang="en-US">
+<style>
+body {
+  background-image: url("https://i.pinimg.com/originals/bb/51/f7/bb51f7930bcd0c21b5e6de58ae2005a6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+</style>
+<body>
+<h1 style="text-align:center;font-size:60px;color:Tomato"> Hello IBM'ers</h1>
+<hr>
+<h2 style="color:DodgerBlue;text-align:center">You are seeing this page from Container: <b><font color="green">$node_name</b></font> </h2>
+<hr>
+</body>
+</html>
+EOF
